@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://do58cpp1qafcx"]
+[gd_scene load_steps=7 format=4 uid="uid://do58cpp1qafcx"]
 
 [ext_resource type="Texture2D" uid="uid://b3duysvynyaxe" path="res://tanks-terrain.png" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://bvwbd1u6knj5a" path="res://boks.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://drrocblolr1p6" path="res://Tank.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://bfecuuq8yinl4" path="res://treboks.tscn" id="4_1bvp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("1_ig7tw")
@@ -32,15 +33,6 @@ sources/0 = SubResource("TileSetAtlasSource_h2yge")
 tile_map_data = PackedByteArray("AAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAABAAAAAAADAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAABAAAAAAADAAEAAAAAAAAAAAADAAAAAAACAAAAAAACAAAAAAADAAEAAAAEAAAAAAACAAAAAAAFAAAAAAACAAAAAAAGAAAAAAACAAAAAAAHAAAAAAACAAEAAAAIAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAQAAAAAAAAAAAABAAQAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAFAAEAAAACAAQAAAAAAAAAAAADAAQAAAAAAAAAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAAAEAAQAAAAAAAAAAAAFAAQAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAMAAAACAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAHAAEAAAABAAAAAAAGAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAIAAAAAAAAAAAAFAAIAAAAAAAAAAAAGAAIAAAAAAAAAAAAHAAIAAAABAAAAAAAHAAMAAAAFAAEAAAAGAAMAAAAAAAAAAAAFAAMAAAAEAAEAAAA=")
 tile_set = SubResource("TileSet_1bvp3")
 
-[node name="Boks" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(709, 543)
-
-[node name="Boks2" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(713, 334)
-
-[node name="Boks3" parent="." instance=ExtResource("2_0xm2m")]
-position = Vector2(124, 217)
-
 [node name="Boks4" parent="." instance=ExtResource("2_0xm2m")]
 position = Vector2(193, 455)
 
@@ -49,3 +41,9 @@ position = Vector2(1094, 56)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_h2yge")]
 position = Vector2(509, 196)
+
+[node name="RigidBody2D" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(837, 374)
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("4_1bvp3")]
+position = Vector2(221, 166)
