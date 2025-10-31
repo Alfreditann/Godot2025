@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bvwbd1u6knj5a"]
+[gd_scene load_steps=5 format=3 uid="uid://bvwbd1u6knj5a"]
 
 [ext_resource type="Texture2D" uid="uid://5ercd24xn6o4" path="res://tanks-simple.png" id="1_8bxtp"]
+[ext_resource type="Script" uid="uid://dk441tdadcp3d" path="res://area_2d.gd" id="2_5xqxx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5xqxx"]
 size = Vector2(53, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5k3oh"]
+size = Vector2(54, 51)
 
 [node name="Boks" type="StaticBody2D"]
 
@@ -15,3 +19,13 @@ shape = SubResource("RectangleShape2D_5xqxx")
 texture = ExtResource("1_8bxtp")
 region_enabled = true
 region_rect = Rect2(15, 99, 56, 56)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_5xqxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_5k3oh")
+debug_color = Color(0.9470386, 3.657937e-06, 0.58729684, 0.41960785)
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
